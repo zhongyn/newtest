@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Newtest</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <% flash.each do |name, msg| -%>
+      <%= content_tag :div, msg, class: name %>
+  <% end -%>
+
+<%= link_to("return to units", units_path) %>
+<%= yield %>
+
+</body>
+</html>

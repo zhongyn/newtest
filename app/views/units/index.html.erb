@@ -1,0 +1,24 @@
+<h1>Units</h1>
+
+<table>
+<thead>
+	<tr><th>Name</th><th>Number of Members</th><th></th></tr>
+</thead>
+
+<tbody>
+
+	<% @units.each do |unit| %>
+		<tr>
+			<td><%= link_to(unit.name, unit_path(unit)) %></td>
+			<td><%= unit.member_count %></td>
+			<td><%= link_to("edit", edit_unit_path(unit)) %> | 
+				<%= link_to("destroy", unit_path(unit), method: "delete", data: { confirm: "Are you sure?" }) %>
+			</td>
+		<tr>
+	<% end %>
+
+</tbody>
+
+</table>
+
+<%= link_to("add a unit", new_unit_path) %>
