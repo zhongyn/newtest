@@ -1,3 +1,4 @@
+<% if false %>
   <ul>
      <% @unit.errors.full_messages.each do |msg| %>
            <li><%= msg %></li>
@@ -17,4 +18,11 @@
 
   <%= f.submit %>
 
+<% end %>
+<% end %>
+
+<%= simple_form_for @unit do |f| %>
+  <%= f.input :name %>
+  <%= f.input :member_count %>
+  <%= f.button :submit %>
 <% end %>
