@@ -1,3 +1,7 @@
+
 <h1><%= @unit.name %></h1>
 
 <div>Number of Members: <%= @unit.member_count %></div>
+
+<%= link_to "Projects", unit_projects_path(@unit) %>
+

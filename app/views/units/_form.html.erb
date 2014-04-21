@@ -1,25 +1,4 @@
-<% if false %>
-  <ul>
-     <% @unit.errors.full_messages.each do |msg| %>
-           <li><%= msg %></li>
-     <% end %>
-  </ul>
 
-<%= form_for @unit do |f| %>
-  <div>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-  
-  <div>
-    <%= f.label :member_count %>
-    <%= f.text_field :member_count %>
-  </div>
-
-  <%= f.submit %>
-
-<% end %>
-<% end %>
 
 <%= simple_form_for @unit do |f| %>
   <%= f.input :name %>
