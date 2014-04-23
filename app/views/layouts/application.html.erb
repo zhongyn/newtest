@@ -12,7 +12,9 @@
       <%= content_tag :div, msg, class: name %>
   <% end -%>
 
-<%= link_to("return to units", units_path) %>
+<p><%= link_to("return to units", units_path) %></p>
+<p><%= link_to("back", :back) %></p>
+
 <%= yield %>
 
 </body>

@@ -1,7 +1,9 @@
 
 
 <%= simple_form_for [@unit, @project] do |f| %>
-  <%= f.input :name %>
+  <div class="form-group">
+    <%= f.input :name, { class: "form-control" } %>
+  </div>
   <%= f.input :description %>
   <%= f.button :submit %>
 <% end %>

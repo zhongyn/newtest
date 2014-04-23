@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 
 
 gem 'simple_form'
+
+gem "rails-erd"
