@@ -2,20 +2,60 @@
 <html>
 <head>
   <title>Newtest</title>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+  <![endif]-->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	<div class="navbar navbar-fluid-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="#">Oregon State</a>
+				<div class="nav nav-pills">
+					<ul class="nav nav-pills">
+						<li><%= link_to "Browse Unit", units_path %></li>
+						<li><%= link_to "Contact us" %></li>
+						<li><%= link_to "Projects" %></li>
+						<% if @project %>
+						  <li><%= link_to "Project List", unit_projects_path(@project.unit) %></li>
+						<% end %>
+						<li><%= link_to("Back", :back) %></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 
-  <% flash.each do |name, msg| -%>
-      <%= content_tag :div, msg, class: name %>
-  <% end -%>
+<div class="container-fluid">
+	<div class="row">
+    <div class="span8"><%= yield %></div>
+    <div class="span4">
+      <h2>About Us</h2>
+          <p>Oregon State University (OSU) is a flagship university of the Oregon University system. A Coeducational, public research university located in Corvallis, Oregon, United States. The university offers undergraduate, graduate, doctoral degrees and a multitude of research opportunities. There are more than 200 academic degree programs offered through the university. OSU's programs in microbiology, nuclear engineering, ecology, forestry, public health, biochemistry, zoology, oceanography, food science and pharmacy are recognized nationally as top tier programs.[citation needed] The OSU's liberal arts programs have also grown significantly and the department is considered a "cornerstone" of the institution.[4] More than 200,000 people have attended OSU since its founding.[5] The Carnegie Foundation classifies Oregon State University as part of its top tier of research institutions.</p>
+    </div>
+  </div>
+</div>
 
-<p><%= link_to("return to units", units_path) %></p>
-<p><%= link_to("back", :back) %></p>
+<div>
+    <% flash.each do |name, msg| -%>
+        <div class="<%= flash_class(name) %>">
+        	<%= msg %>
+        </div>
+    <% end -%>
+</div>
+  
 
-<%= yield %>
+
 
 </body>
 </html>

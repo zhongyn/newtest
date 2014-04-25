@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
   	@project = Project.new(project_params)
   	@project.unit = @unit
 
+    # try to save the project, if successful forward to the project list
   	if @project.save
   		redirect_to unit_projects_path, notice: "You have successfully created a new project!"
   	else
@@ -46,10 +47,12 @@ class ProjectsController < ApplicationController
   	params.require(:project).permit(:name, :description)
   end
 
+  # This method loads a project
   def load_project
   	@project = @unit.projects.find(params[:id])
   end
 
+  # This method loads the unit we are working with
   def load_unit
   	@unit = Unit.find(params[:unit_id])
   end  	

@@ -1,7 +1,15 @@
 
 
-<%= simple_form_for @unit do |f| %>
-  <%= f.input :name %>
-  <%= f.input :member_count %>
-  <%= f.button :submit %>
+<%= simple_form_for @unit, html: {class: "form-horizontal"} do |f| %>
+
+  	<legend><%= controller.action_name.capitalize %> Unit</legend>
+    <div class="control-group">
+      <%= f.input :name, placeholder: "Enter email" %>
+    </div> 
+    <div class="control-group">
+    	<%= f.input :member_count, {class: "Enter email"} %>
+    </div>
+    <div class="form-actions">
+    	<%= f.button :submit, class: "btn btn-primary" %>
+    </div>
 <% end %>
