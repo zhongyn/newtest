@@ -1,13 +1,11 @@
 module ApplicationHelper
 
+	# This method checks the level of our flash and returns a string of css classes
 	def flash_class(level)
 	    case level
-	        when "info" then "alert alert-info"
-	        when "notice" then "alert alert-success"
-	        when "error" then "alert alert-error"
-	        when "warning" then "alert alert-error"
+	        when "alert" then "alert alert-error"
+	        else "alert alert-success"
 	    end
 	end
-
 
 end

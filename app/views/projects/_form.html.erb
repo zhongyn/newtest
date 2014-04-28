@@ -1,9 +1,15 @@
 
 
-<%= simple_form_for [@unit, @project] do |f| %>
-  <div class="form-group">
-    <%= f.input :name, { class: "form-control" } %>
-  </div>
-  <%= f.input :description %>
-  <%= f.button :submit %>
+<%= simple_form_for @unit, html: {class: "form-horizontal"} do |f| %>
+
+  	<legend><%= controller.action_name.capitalize %> Unit</legend>
+    <div class="control-group">
+      <%= f.input :name, placeholder: "Enter name" %>
+    </div> 
+    <div class="control-group">
+    	<%= f.input :member_count, {class: "Enter member_count"} %>
+    </div>
+    <div class="form-actions">
+    	<%= f.button :submit, class: "btn btn-primary" %>
+    </div>
 <% end %>

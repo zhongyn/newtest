@@ -28,7 +28,7 @@ class UnitsController < ApplicationController
 
   def update
   	if @unit.update_attributes(unit_params)
-      redirect_to @unit, success: "You have successfully updated the unit!" 
+      redirect_to @unit, notice: "You have successfully updated the unit!" 
   	else
   	  render :edit
   	end
@@ -36,7 +36,7 @@ class UnitsController < ApplicationController
 
   def destroy
   	@unit.destroy
-  	redirect_to units_path, warning: "You deleted a unit, why did you do that???"
+  	redirect_to units_path, alert: "You deleted a unit, why did you do that???"
   end
 
 
