@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
+  get 'statuses/index'
+
   resources :units do
     resources :projects
-    resources :statuses
   end
+
+  resources :statuses
 
 
 

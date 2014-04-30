@@ -1,13 +1,13 @@
 
 
-<%= simple_form_for @unit, html: {class: "form-horizontal"} do |f| %>
+<%= simple_form_for @status, html: {class: "form-horizontal"} do |f| %>
 
-  	<legend><%= controller.action_name.capitalize %> Unit</legend>
+  	<legend><%= controller.action_name.capitalize %> status</legend>
     <div class="control-group">
       <%= f.input :name, placeholder: "Enter name" %>
     </div> 
     <div class="control-group">
-    	<%= f.input :member_count, placeholder: "Enter member_count" %>
+    	<%= f.input :project_count, {class: "Enter project_count"} %>
     </div>
     <div class="form-actions">
     	<%= f.button :submit, class: "btn btn-primary" %>

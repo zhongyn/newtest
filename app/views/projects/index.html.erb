@@ -6,21 +6,22 @@
 
 			<table class="table table-striped">
 			<thead>
-				<tr><th>Name</th><th>Description</th><th></th></tr>
+				<tr><th>Project ID</th><th>Name</th><th>Description</th><th>Status</th></tr>
 			</thead>
 
 			<tbody>
 				<% @projects.each do |project| %>
 					<tr>
+						<td><%= project.id%></td>
 						<td><%= link_to(project.name, unit_project_path(@unit,project)) %></td>
 						<td><%= project.description %></td>
+						<td><%= project.status.name unless project.status.nil? %></td>
 						<td><%= link_to("edit", edit_unit_project_path(@unit,project), class: "btn btn-mini") %>
-							<%= link_to("destroy", unit_project_path(@unit,project), method: "delete", data: { confirm: "Are you sure?" }, class: "btn btn-mini btn-danger") %>
-						</td>
+							<%= link_to("destroy", unit_project_path(@unit,project), method: "delete", data: { confirm: "Are you sure?" }, class: "btn btn-mini btn-danger") %></td>
+						
 					<tr>
 				<% end %>
 			</tbody>
-
 			</table>
 
 			<%= link_to("add a project", new_unit_project_path, class: "btn btn-primary") %>

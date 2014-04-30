@@ -4,11 +4,11 @@ class ProjectsController < ApplicationController
   before_filter :load_project, :only => [:show, :edit, :update, :destroy]
 
   def index
-	@projects = @unit.projects.order(:name)
+	  @projects = @unit.projects.order(:name)
   end
 
   def new
-	@project = Project.new
+	  @project = Project.new
   end
 
   def create
@@ -44,7 +44,7 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-  	params.require(:project).permit(:name, :description)
+  	params.require(:project).permit(:name, :description, :status_id)
   end
 
   # This method loads a project
@@ -56,5 +56,7 @@ class ProjectsController < ApplicationController
   def load_unit
   	@unit = Unit.find(params[:unit_id])
   end  	
+
+
 
 end
