@@ -1,14 +1,5 @@
 class CreateProjects < ActiveRecord::Migration
   def change
-    create_table :units do |t|
-      t.string :name
-      t.timestamps
-    end
-
-    create_table :status do |t|
-      t.string :name
-      t. timestamps
-    end
 
     create_table :projects do |t|
       t.string :name
@@ -18,6 +9,7 @@ class CreateProjects < ActiveRecord::Migration
       t.belongs_to :unit      
 
       t.reference :status, index: true
+      t.reference :units, index: true
       
       t.timestamps
     end

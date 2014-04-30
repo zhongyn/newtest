@@ -5,9 +5,6 @@ class CreateStatuses < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :projects do |t|
-    	t.belongs_to :status
-    	t.timestamps
-    end
+    
   end
 end

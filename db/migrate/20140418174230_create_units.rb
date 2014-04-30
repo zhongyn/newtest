@@ -8,9 +8,6 @@ class CreateUnits < ActiveRecord::Migration
       t.timestamps
     end
 
-    create_table :projects do |t|
-    	t.belongs_to :unit
-    	t.timestamps
-    end
+    
   end
 end
