@@ -49,7 +49,7 @@ def app_deploy():
 # env.my_variable_name = value
 def app_set_required_environment_vars():
     env.app_name = "myfirstproject`"
-    env.repo_name = "client/nep.git"
+    env.repo_name = "zhongya/myfirstproject.git"
 
 ## Dev
     env.develop_hosts = ['dev-vd01.cws.oregonstate.edu']
