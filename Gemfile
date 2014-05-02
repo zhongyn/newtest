@@ -37,7 +37,8 @@ gem 'spring',        group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
+gem 'libv8', '~> 3.11.8' 
+gem "therubyracer"
 
 gem 'simple_form'
 
