@@ -63,8 +63,8 @@ def app_set_required_environment_vars():
     #env.production_hosts = ['nep-vp01.cws.oregonstate.edu']
     #env.production_path = "/var/www/%s_code/" % env.app_name
 
-    #env.repo_type = "git"
-    #env.repo_url = "git@gitlab.cws.oregonstate.edu"
+    env.repo_type = "git"
+    env.repo_url = "git@gitlab.cws.oregonstate.edu"
 
 # Array of symlinks to be created to the shared directory.  Each individual symlink is an array
 # The first element in the array is the path within the 'shared' directory which we will be
