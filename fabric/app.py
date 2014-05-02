@@ -48,7 +48,7 @@ def app_deploy():
 # Sets unique environmental variables. This can be done with:
 # env.my_variable_name = value
 def app_set_required_environment_vars():
-    env.app_name = "myfirstproject`"
+    env.app_name = "myfirstproject"
     env.repo_name = "zhongya/myfirstproject.git"
 
 ## Dev
