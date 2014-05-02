@@ -71,7 +71,7 @@ def app_set_required_environment_vars():
 # symlinking to, the second element is the path in the release directory where the symlink will
 # be.  If the second element is omitted the path is assumed to be the same in both locations.
     env.custom_symlinks = [
-        #['config/logger.yml'],
+        ['config/secrets.yml'],
         #['system', 'public/system'],
     ]
 
