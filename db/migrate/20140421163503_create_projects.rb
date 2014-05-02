@@ -10,13 +10,13 @@ class CreateProjects < ActiveRecord::Migration
 
       #t.reference :status, index: true
       #t.reference :units, index: true
-      
-      add_column :projects, :status_id, :integer
-      add_index :projects, :status_id
+      t.belongs_to :status
+
       #add_column :statuses, :project_count, :integer
 
       t.timestamps
     end
+      add_index :projects, :status_id
 
   end
 end

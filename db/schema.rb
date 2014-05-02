@@ -19,12 +19,12 @@ ActiveRecord::Schema.define(version: 20140430170335) do
     t.string   "belong_to_unit"
     t.integer  "bugget"
     t.integer  "unit_id"
+    t.integer  "status_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "status_id"
   end
 
-  add_index "projects", ["unit_id"], name: "index_projects_on_unit_id"
+  add_index "projects", ["status_id"], name: "index_projects_on_status_id", using: :btree
 
   create_table "statuses", force: true do |t|
     t.string   "name"
