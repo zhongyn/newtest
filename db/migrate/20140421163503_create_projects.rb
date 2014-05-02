@@ -8,9 +8,13 @@ class CreateProjects < ActiveRecord::Migration
       t.integer :bugget
       t.belongs_to :unit      
 
-      t.reference :status, index: true
-      t.reference :units, index: true
+      #t.reference :status, index: true
+      #t.reference :units, index: true
       
+      add_column :projects, :status_id, :integer
+      add_index :projects, :status_id
+      #add_column :statuses, :project_count, :integer
+
       t.timestamps
     end
 
