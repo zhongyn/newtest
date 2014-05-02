@@ -1,0 +1,57 @@
+from fabric.api import *
+
+# Turn of using shell
+env.use_shell = False
+
+# Sets configuration values used in the script to deploy NEP.
+# Please include NO trailing slashes in all directory names within this file.
+
+# Debian users
+env.user = 'redmine-repo'
+env.app_user = 'nobody'
+env.apache_user = 'www-data'
+
+# CENTOS users
+env.user = 'app_user'
+env.app_user = 'app_user'
+env.apache_user = 'apache'
+
+# RVM path
+env.rvm = "/home/%s/.rvm/scripts/rvm" % env.user
+
+# Passenger version
+env.passenger_version = ""
+
+# Ruby patch level
+env.ruby_patch_level = ""
+
+# If the user does not provide an environment to deploy to, ask if they want this one
+env.default_environment = 'development'
+
+# Location of app in GIT
+env.git_path = ''
+
+# Location of app in SVN
+env.svn_path = ''
+
+# Each environment has a host, and a path associated with it.
+# Please don't include a trailing slash when entering paths.
+env.development_host = ''
+env.development = ''
+
+env.staging_host = ''
+env.staging = ''
+
+env.production_host = ''
+env.production = ''
+
+# Location where files are uploaded, underneath the shared_directory_name
+env.file_upload_directory = 'system'
+
+# Directory names that structure the releases. These shouldn't have to be changed.
+env.shared_directory_name = 'shared'
+env.shared_config_directory_name = 'config'
+env.shared_logs_directory_name = 'log'
+env.shared_tmp_directory_name = 'tmp'
+env.all_releases_directory_name = 'releases'
+env.current_release_directory_name = 'current'
