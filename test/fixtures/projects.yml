@@ -1,10 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyString
+  name: Collecting bamboo
+  description: help panda find food
   belong_to_unit: MyString
-  bugget: 1
+  bugget: 5
+  unit: one
+  status: one
 
 two:
   name: MyString

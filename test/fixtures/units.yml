@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  manager: MyString
-  notes: MyText
-  member_count: 
+  name: Test Unit
+  manager: Yaonan
+  notes: Here's some notes
+  member_count: 13
 
 two:
   name: MyString
   manager: MyString
   notes: MyText
-  member_count: 
+  member_count: 12

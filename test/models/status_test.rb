@@ -1,7 +1,10 @@
 require 'test_helper'
 
 class StatusTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "A status should have a name" do
+  	status = statuses(:one)
+  	status.name = nil
+  	assert_not status.save
+  end
+
 end
