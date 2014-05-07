@@ -19,9 +19,5 @@ class UnitsControllerTest < ActionController::TestCase
   	assert_redirected_to unit_path(assigns(:unit))
   end
 
-  test "should update unit" do
-  	post :update
-  	assert_redirected_to unit_path(assigns(:unit))
-  end
 
 end
